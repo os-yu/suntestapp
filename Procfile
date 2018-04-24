@@ -1,1 +1,1 @@
-web: java -jar target/suntestapp.jar
+web: java -jar target/suntestapp.war
