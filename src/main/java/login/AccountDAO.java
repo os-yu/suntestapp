@@ -67,7 +67,7 @@ public class AccountDAO implements Serializable{
 		try{
 			db = getConnection();
 
-			ps = db.prepareStatement("select * from public.account order by id");
+			ps = db.prepareStatement("select * from public.account order by user_id");
 			rs = ps.executeQuery();
 
 			while(rs.next()){
@@ -143,7 +143,7 @@ public class AccountDAO implements Serializable{
 		try{
 			db = getConnection();
 
-			ps = db.prepareStatement("select * from public.account order by id");
+			ps = db.prepareStatement("select * from public.account order by user_id");
 			rs = ps.executeQuery();
 
 			while(rs.next()){
