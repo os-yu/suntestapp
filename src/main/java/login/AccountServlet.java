@@ -63,6 +63,7 @@ public class AccountServlet extends HttpServlet {
 			account.setBirthday(birth);
 
 			if(dao.update(account)){
+				account = dao.selectId(request.getParameter("id"));
 				request.setAttribute("account", account);
 				this.getServletContext().getRequestDispatcher("/customerdetail.jsp").forward(request, response);
 			}else{
