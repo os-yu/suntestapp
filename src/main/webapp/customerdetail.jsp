@@ -69,8 +69,8 @@
 <%
 	for(int i = 1; i <= 12; i++)
 	{
-		if(i == mon)
-			out.print("<option value=\"" + i + "\" selected=\"selected\">" + i + "</option>");
+//		if(i == mon)
+//			out.print("<option value=\"" + i + "\" selected=\"selected\">" + i + "</option>");
 		out.print("<option value=\"" + i + "\">" + i + "</option>");
 	}
 %>
@@ -80,8 +80,8 @@
 <%
 	for(int i = 1; i <= 31; i++)
 	{
-		if(i == day)
-			out.print("<option value=\"" + i + "\" selected=\"selected\">" + i + "</option>");
+//		if(i == day)
+//			out.print("<option value=\"" + i + "\" selected=\"selected\">" + i + "</option>");
 		out.print("<option value=\"" + i + "\">" + i + "</option>");
 	}
 %>
