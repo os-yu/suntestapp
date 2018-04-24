@@ -5,16 +5,12 @@
 	String id = account.getId();
 	String email = account.getEmail();
 	String birth = account.getBirthday();
-//	int year = Integer.parseInt(birth.substring(0,4));
-//	int mon = Integer.parseInt(birth.substring(birth.indexOf("年"),birth.indexOf("月")));
-//	int day = Integer.parseInt(birth.substring(birth.indexOf("月")+1));
+	int year = Integer.parseInt(birth.substring(0,birth.indexOf("年")));
+	int mon = Integer.parseInt(birth.substring(birth.indexOf("年")+1,birth.indexOf("月")));
+	int day = Integer.parseInt(birth.substring(birth.indexOf("月")+1,birth.length()-1));
 %>
 <% 		String msg = (String)request.getAttribute("msg");
     	if(msg == null){msg = "";}
-%>
-<%!
-	Calendar cal = Calendar.getInstance();
-	int year = cal.get(Calendar.YEAR);
 %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
