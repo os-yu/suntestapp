@@ -5,9 +5,9 @@
 	String id = account.getId();
 	String email = account.getEmail();
 	String birth = account.getBirthday();
-	int year = Integer.parseInt(birth.substring(0,4));
-	int mon = Integer.parseInt(birth.substring(birth.indexOf("年"),birth.indexOf("月")));
-	int day = Integer.parseInt(birth.substring(birth.indexOf("月")+1));
+//	int year = Integer.parseInt(birth.substring(0,4));
+//	int mon = Integer.parseInt(birth.substring(birth.indexOf("年"),birth.indexOf("月")));
+//	int day = Integer.parseInt(birth.substring(birth.indexOf("月")+1));
 %>
 <% 		String msg = (String)request.getAttribute("msg");
     	if(msg == null){msg = "";}
@@ -54,7 +54,7 @@
 			<td><%out.print(id);%></td>
 			<td><input type="text" name="email" style="ime-mode:disabled" value="<%out.print(email);%>"/></td>
 			<td>
-		<select name="year">
+		<select name="year"><%out.print(birth);%>
 <%
 	for(int i = 1900; i <= year; i++)
 	{
