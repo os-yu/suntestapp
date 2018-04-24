@@ -6,8 +6,8 @@
 	String email = account.getEmail();
 	String birth = account.getBirthday();
 	int year = Integer.parseInt(birth.substring(0,4));
-	int mon = Integer.parseInt(birth.substring(5,birth.indexOf("月")));
-	int day = Integer.parseInt(birth.substring(birth.indexOf("月")+1,birth.length()-1));
+	int mon = Integer.parseInt(birth.substring(birth.indexOf("年"),birth.indexOf("月")));
+	int day = Integer.parseInt(birth.substring(birth.indexOf("月")+1));
 %>
 <% 		String msg = (String)request.getAttribute("msg");
     	if(msg == null){msg = "";}
