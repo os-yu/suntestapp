@@ -34,8 +34,9 @@ public class AccountServlet extends HttpServlet {
 		if(account != null){
 			request.setAttribute("account", account);
 			this.getServletContext().getRequestDispatcher("/customerdetail.jsp").forward(request, response);
+		}else{
+			this.getServletContext().getRequestDispatcher("/login.jsp").forward(request,response);
 		}
-		this.getServletContext().getRequestDispatcher("/login.jsp").forward(request,response);
 	}
 
 	/**
