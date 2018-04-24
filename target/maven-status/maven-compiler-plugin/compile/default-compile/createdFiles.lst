@@ -2,4 +2,5 @@ login\UserAccount.class
 login\LoginServlet.class
 login\AccountDAO.class
 login\AccountServlet.class
+welcome\WelcomeServlet.class
 login\EnterServlet.class
