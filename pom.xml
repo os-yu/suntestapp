@@ -59,6 +59,12 @@
       <artifactId>bootstrap</artifactId>
       <version>${webjars-bootstrap.version}</version>
     </dependency>
+            <dependency>
+            <groupId>com.github.jsimone</groupId>
+            <artifactId>webapp-runner</artifactId>
+            <version>8.5.27.0</version>
+            <scope>provided</scope>
+        </dependency>
   </dependencies>
 
   <build>
