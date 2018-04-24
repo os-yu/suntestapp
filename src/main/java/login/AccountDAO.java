@@ -204,10 +204,11 @@ public class AccountDAO implements Serializable{
 			ps = db.prepareStatement("select * from public.account where user_id=?");
 			ps.setString(1,id);
 			rs = ps.executeQuery();
-
-			account.setId(rs.getString("user_id"));
-			account.setEmail(rs.getString("email"));
-			account.setBirthday(rs.getString("birthday"));
+			while(rs.next()){
+				account.setId(rs.getString("user_id"));
+				account.setEmail(rs.getString("email"));
+				account.setBirthday(rs.getString("birthday"));
+			}
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
